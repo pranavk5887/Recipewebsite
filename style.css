@@ -1,0 +1,158 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+
+body{
+    background-color: brown;
+    color:white;
+}
+
+header nav{
+    background-color: rgb(7, 6, 6);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+
+header nav h1{
+    font-size: 26px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+header nav form{
+    display: flex;
+    justify-content: center;
+}
+
+form input[type='text'],button[type='submit']{
+    flex-grow: 1;
+    margin-right: 10px;
+    border: none;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+form button[type="submit"]{
+    background-color: rgb(45, 77, 109);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+form button[type="submit"]:hover{
+    background-color: rgb(79, 118, 157);
+}
+
+/*Main section*/
+.recipe-container{
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 40px;
+    width: 80%;
+    margin:10px auto;
+    padding: 20px;
+    
+    
+}
+    
+
+.recipe{
+    background-color: lightgray;
+    display: flex;
+    flex-direction: column;
+    color: #000;
+    border-radius: 6px;
+    cursor: pointer;
+    font-style:italic;
+    font-weight: 700;
+    max-width: 350px;
+
+
+}
+
+.recipe button{
+    border: 1px solid black;
+    border-radius: 5px;
+    width:40%;
+    margin:  3px auto;
+    height: 9%;
+    padding: 1px;
+    background-color: rgb(219, 29, 29);
+    color:white;
+    
+}
+
+.recipe button:hover{
+    background-color:rgb(240, 87, 87)
+}
+
+.recipe img{
+    height:300px;
+}
+
+.recipe:hover{
+    background-color: lightgray;
+}
+.recipe-details{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    background-color: #694c2f;
+    transform: translate(-50%,-50%);
+    border-radius: 12px;
+    width: 45%;
+    height: 50%;
+    overflow-y: auto;
+}
+
+.recipeName{
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+.IngredientsList{
+    padding-left: 30px;
+    margin-bottom: 10px;
+}
+
+.IngredientsList li{
+    margin-bottom: 10px;
+}
+
+h3{
+    padding-left: 20px;
+    margin-bottom: 5px;
+}
+
+.instructions{
+    text-align: justify;
+    padding-left: 20px;
+    padding-right: 20px;
+    line-height: 25px;
+
+}
+
+
+
+/*responsive code*/
+@media screen and (max-width:600px){
+    header nav{
+        flex-direction: column;
+    }
+
+    header nav form{
+        width: 80%;
+        margin-top: 20px;
+    }
+}
+
